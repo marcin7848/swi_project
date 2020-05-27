@@ -1,0 +1,16 @@
+<div class="search-wrapper">
+  <div class="search-header"><i class="pi pi-caret-up recents-icon"></i><span>Checkout recently found songs!</span></div>
+  <div class="custom-search">
+    <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+      <p-listbox [options]="recentSongList" [(ngModel)]="recentSongSelected" [style]="{'width':'500px'}">
+        <ng-template let-song pTemplate="item" >
+          <div class="ui-helper-clearfix recents-list" (click)="searchRecentSong($event, song.value)">
+            <img class="cover-image" src="{{song.value.coverImg}}"/>
+            <span style="margin-left: 10px;">{{song.label}}</span>
+            <app-favourite-songs class="add-favourite-icon" [SongId]="song.value.SongId"></app-favourite-songs>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+  </div>
+</div>

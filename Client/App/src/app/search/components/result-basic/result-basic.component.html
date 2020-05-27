@@ -1,0 +1,21 @@
+<div fxLayout="row">
+    <div fxFlexOffset="2" fxFlex="10">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <img class="cover-image" src="{{song.coverImg}}"/>
+        </div>
+    </div>
+    <div fxFlex="30" class="right-border" fxLayout="column" fxLayoutAlign="center center">
+        <i>Title</i>
+        <p>{{song.Song}}</p>
+    </div>
+    <div fxFlex="30" class="right-border" fxLayout="column" fxLayoutAlign="center center">
+        <i>Artist</i>
+        <u><p (click)="artistSearch()">{{song.Singer}}</p></u>
+    </div>
+    <div fxFlex="25" class="right-border" fxLayout="column" fxLayoutAlign="center center">
+        <i>Spotify ratings:</i>
+    </div>
+    <div fxFlex="5" fxLayoutAlign="center center">
+      <app-favourite-songs class="add-favourite-icon" [SongId]="this.song.id"></app-favourite-songs>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+@import "../../../../theme";
+
+.list-container {
+    height: 100vh;
+    padding: 20px 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    overflow-y: scroll;
+    font-size: 1.3em;
+    font-family: 'Cutive', serif;
+    background-color: whitesmoke;
+}
+
+a {
+    color: inherit;
+} 
+
+.lyrics-input {
+    width: 95%;
+    height: 3.25rem;
+    margin-top: 10px;
+}

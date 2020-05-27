@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "theme";
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.simple-select-label {
+  font-size: 12px;
+  display: inline-block;
+  background-color: $color-primary;
+  margin: 1px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: white;
+}
+
+.simple-select-item {
+  display: inline-block;
+}
+
+.chips {
+  background-color: $color-secondary;
+  border-radius: 3px;
+  padding: 1px 3px;
+  border: 1px solid $color-primary;
+  color: $text-color;
+  text-align: center;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+

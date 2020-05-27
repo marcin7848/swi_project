@@ -1,0 +1,44 @@
+$background-gray: #eaeaea;
+$border-gray: #a6a6a6;
+$border-black: #000000;
+$color-primary: #2198f3;
+$color-secondary: #4da9f0;
+$text-color: #212121;
+$text-color-secondary: #646366;
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 3rem 0 2rem 0;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin: 2.5rem 0 1.66rem 0;
+}
+
+h3 {
+  font-size: 3rem;
+  margin: 2rem 0 1.33rem 0;
+}
+
+h4 {
+  font-size: 2.2rem;
+  margin: 1.4rem 0 0.93rem 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin: 0.7rem 0 0.46rem 0;
+}
+
+h6 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.33rem 0;
+}

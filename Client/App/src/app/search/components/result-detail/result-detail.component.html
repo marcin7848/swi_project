@@ -1,0 +1,32 @@
+<div fxLayout="column">
+  <div fxFlex="80" fxLayoutGap="10px" fxLayout="row">
+    <div fxFlex="25" class="lyrics">
+      <span>{{song.Lyrics}}</span>
+    </div>
+    <div fxFlex="75" fxLayoutAlign="center center" class="yt" *ngIf="YTUrl">
+      <iframe width="700" height="394" [src]="YTUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div fxFlex="20" fxLayout="row" class="top-border">
+    <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center">
+      <i>release date</i>
+      <p>{{song.Date | date:'dd-MM-yyyy'}}</p>
+    </div>
+    <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center">
+      <i>producers</i>
+      <p>{{song.Producers}}</p>
+    </div>
+    <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center">
+      <i>genres</i>
+      <div>
+        <p><span *ngFor="let genre of song.Genres">{{genre}} </span></p>
+      </div>
+    </div>
+    <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center">
+      <i>tags</i>
+      <div>
+        <p><span *ngFor="let tag of song.Tags">{{tag}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>

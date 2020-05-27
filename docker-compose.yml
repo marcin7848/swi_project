@@ -1,0 +1,23 @@
+version: '3'
+services:
+  swi_solr:
+    build: ./Solr/
+    container_name: swi_solr
+    ports:
+     - "8983:8983"
+    volumes:
+     - ./Solr/swi_core:/var/solr/data/swi_core
+
+  swi_angular:
+    build: ./Client/
+    container_name: swi_angular
+    ports:
+     - "80:80"
+     
+  swi_jsonserver:
+    build: ./JsonServer/
+    container_name: swi_jsonserver
+    ports:
+     - "3000:3000"
+    volumes:
+     - ./JsonServer/db:/db

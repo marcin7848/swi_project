@@ -1,0 +1,27 @@
+@import "../../../../theme";
+
+.custom-search {
+    background-color: white;
+    border: 1px solid grey;
+    padding: 30px;
+
+    input {
+        width: 400px;
+    }
+}
+
+.input-label {
+    min-width: 100px !important;
+}
+
+.search-header {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: $color-primary;
+    border: 1px $color-primary;
+}
+
+.search-wrapper {
+    box-shadow: grey 3px 3px 50px 10px;
+}

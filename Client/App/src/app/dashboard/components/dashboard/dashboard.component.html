@@ -1,0 +1,25 @@
+  <form [formGroup]="searchForm" fxLayout="column" class="dash">
+    <div fxFlex="20" fxLayout="row" fxLayoutAlign="center center">
+      <div fxFlex="100" fxLayoutAlign="center">
+        <h1 style="width: 90%;">♫ Lyrics search - search lyrics from around the world!</h1>
+      </div>
+    </div>
+    <div fxFlex="10" fxLayout="row" fxLayoutAlign="space-around center">
+        <input
+          class="lyrics-input"
+          type="text"
+          formControlName="lyrics"
+          placeholder="Enter text of a song"
+          pInputText
+          (keyup.enter)="searchClick()" />
+    </div>
+    <div fxFlex="10" fxLayout="row" fxLayoutGap="400px" fxLayoutAlign="center center">
+        <button pButton class="search-button" type="button" label="Show favourites" (click)="showFavouriteSongs()"></button>
+        <button pButton class="search-button" type="button" label="Search" (click)="searchClick()"></button>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-around center">
+      <app-advanced-search></app-advanced-search>
+      <app-recents></app-recents>
+    </div>
+  </form>
+

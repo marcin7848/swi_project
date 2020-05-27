@@ -1,0 +1,32 @@
+<div class="list-container" fxLayout="column">
+  <div fxFlex="10" fxLayout="row" fxLayoutGap="20px">
+    <div fxFlex="10" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign=" center">
+      <a routerLink="/"><h3>←</h3></a>
+      <h3>Results</h3>
+    </div>
+    <div fxFlex="90" fxLayoutAlign="end center">
+      <input
+          class="lyrics-input"
+          type="text"
+          [(ngModel)]="lyrics"
+          placeholder="Enter text of a song"
+          pInputText
+          (keyup.enter)="searchClick()" />
+    </div>
+  </div>
+  <div fxFlex="90" class="list" *ngIf="showList">
+    <p-accordion >
+      <p-accordionTab *ngFor="let song of results">
+        <p-header>
+          <app-result-basic [song]="song"></app-result-basic>
+      </p-header>
+      <ng-template pTemplate="content">
+        <app-result-detail [song]="song"></app-result-detail>
+      </ng-template>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <div fxFlex="90" *ngIf="showList && noResutls">
+    Ups! No results, please try something different
+  </div>
+</div>

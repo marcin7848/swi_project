@@ -1,0 +1,24 @@
+<dataConfig>
+<dataSource type="FileDataSource" encoding="UTF-8"/>
+<document>
+		<entity name="music"
+            processor="XPathEntityProcessor"
+            stream="true"
+            forEach="/root/music"
+            url="/var/solr/data/swi_core/lyrics.xml"
+            transformer="RegexTransformer,DateFormatTransformer"
+				>
+			<field column="id" xpath="/root/music/id" />
+			<field column="Singer" xpath="/root/music/Singer" />
+			<field column="Album" xpath="/root/music/Album" />
+			<field column="Song" xpath="/root/music/Song" />
+			<field column="Date" xpath="/root/music/Date" dateTimeFormat="yyyy-MM-dd"/>
+			<field column="Featurings" xpath="/root/music/Featurings/Featuring"/>
+			<field column="Genres" xpath="/root/music/Genres/Genre"/>
+			<field column="Lyrics" xpath="/root/music/Lyrics" />
+			<field column="Tags" xpath="/root/music/Tags/Tag"/>
+			<field column="Producers" xpath="/root/music/Producers/Producer"/>
+			<field column="Writers" xpath="/root/music/Writers/Writer"/>
+    </entity>
+</document>
+</dataConfig>

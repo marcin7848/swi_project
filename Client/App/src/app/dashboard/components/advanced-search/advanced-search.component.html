@@ -1,0 +1,27 @@
+<div class="search-wrapper">
+  <div class="search-header">Custom search</div>
+  <div class="custom-search">
+    <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" [formGroup]="advancedFormGroup">
+      <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon input-label">Artist: </span>
+          <input type="text" pInputText formControlName="artist">      
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon input-label ">Genre: </span>
+        <input type="text" pInputText formControlName="genre">      
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon input-label ">Album: </span>
+        <input type="text" pInputText formControlName="album">      
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon input-label ">Writers: </span>
+        <input type="text" pInputText formControlName="writers">      
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon input-label ">Producers: </span>
+        <input type="text" pInputText formControlName="producers">      
+      </div>
+    </div>
+  </div>
+</div>

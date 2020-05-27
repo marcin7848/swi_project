@@ -1,0 +1,2 @@
+<i *ngIf="!isFavouriteSong" class="pi pi-plus-circle" pTooltip="Add to favourites" (click)="addToFavourites($event, SongId)"></i>
+<i *ngIf="isFavouriteSong" class="pi pi-minus-circle" pTooltip="Remove from favourites" (click)="removeFromFavourites($event, SongId)"></i>
