@@ -13,7 +13,9 @@
         <u><p (click)="artistSearch()">{{song.Singer}}</p></u>
     </div>
     <div fxFlex="25" class="right-border" fxLayout="column" fxLayoutAlign="center center">
-        <i>Spotify ratings:</i>
+        <i>Album</i>
+        <u *ngIf="song.Album"><p (click)="albumSearch()">{{song.Album}}</p></u>
+        <p *ngIf="!song.Album">Album name is not available</p>
     </div>
     <div fxFlex="5" fxLayoutAlign="center center">
       <app-favourite-songs class="add-favourite-icon" [SongId]="this.song.id"></app-favourite-songs>

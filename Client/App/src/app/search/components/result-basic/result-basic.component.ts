@@ -23,4 +23,11 @@ export class ResultBasicComponent implements OnInit {
     localStorage.setItem('currentSearch', JSON.stringify(model));
     window.location.reload();
   }
+
+  albumSearch() {
+    const model = new SearchQuery();
+    model.album = this.song.Album;
+    localStorage.setItem('currentSearch', JSON.stringify(model));
+    window.location.reload();
+  }
 }
